@@ -31,7 +31,7 @@ export default function Home() {
         <div className='prices'>
           <h1 className='pricesTitle'> Prices</h1>
           <Image src="/gym5.jpg" width="1000px" height="650px" alt="Prices image"></Image>
-          <h4 style={{ textAlign: "center", margin: "20px" }}>We have additional offers in important days. Your birthday is an impotrant day too.</h4>
+          <h4 style={{ textAlign: "center", margin: "20px" }}>We have additional offers in important days. Your birthday is an important day too.</h4>
         </div>
         <div className='location'>
           <div className="locationExplain">
