@@ -1,26 +1,813 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
 
 * {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+
+.firstNavbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  font-size: 1.2rem;
+  background-color: black;
+  color: white;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+}
+
+.navimg {
+  border-radius: 50%;
+}
+
+.navimg:hover {
+  cursor: pointer;
+}
+
+h2 .link {
+  margin: 0;
+
+}
+
+h2 .link:hover {
+  background-color: black;
+}
+
+.menu__box .menu-logo {
+  margin-left: 20px;
+}
+
+.rightSection {
+  width: 42%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+
+.leftNavSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  margin-left: 30px;
+}
+
+.link {
+  color: orange;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 30px;
+}
+
+.link:hover {
+  cursor: pointer;
+  transition: .2s;
+  background-color: rgba(46, 44, 44, 0.589);
+}
+
+@media screen and (max-width:1150px) {
+  #secondmenu {
+    display: block;
+    z-index: 1000000000000;
+    color: orange;
+    height: 0.1px;
+    position: sticky;
   }
-  body {
+
+  #maintitle {
+    font-size: 6vh;
+  }
+
+  #ufit {
+    width: 200px;
+    height: 200px;
+  }
+
+  #cb {
+    width: 350px;
+  }
+
+  #fuck {
+    font-size: 3vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+  }
+
+  #rightExercise {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+  }
+
+  #exerciseTitle {
+    font-size: 8vh;
+  }
+
+  #dietTitle {
+    font-size: 6vh;
+  }
+
+  #rightDiet {
+    display: none;
+  }
+
+  #button2 {
+    display: block;
+    margin: 20px;
+    font-size: large;
+  }
+
+  #leftDiet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #suptitle {
     color: white;
-    background: black;
+    font-size: 6vh;
+    margin-bottom: 60px;
+    text-align: center;
   }
+
+  .blank {
+    color: orange;
+  }
+
+
+
+
+  #map {
+    width: 350px;
+    height: 300px;
+  }
+
+  .primaryFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .firstNavbar {
+    display: none;
+  }
+
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  #menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+  }
+
+  #menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  #menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  #menu__toggle:checked~.menu__box {
+    visibility: visible;
+    left: 0;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 26px;
+    height: 26px;
+
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .menu__btn>span,
+  .menu__btn>span::before,
+  .menu__btn>span::after {
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: orange;
+
+    transition-duration: .25s;
+  }
+
+  .menu__btn>span::before {
+
+    content: '';
+    top: -8px;
+  }
+
+  .menu__btn>span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .menu__box {
+
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+
+    width: 300px;
+    height: 100%;
+
+    margin: 0;
+    padding: 80px 0;
+
+    list-style: none;
+
+    background-color: black;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+    transition-duration: .25s;
+  }
+
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+
+    color: orange;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition-duration: .25s;
+  }
+
+  .menu__item:hover {
+    background-color: rgba(46, 44, 44, 0.589);
+  }
+}
+
+/* ------------------------------------------------------------footer------------------------------------------------------------------------------ */
+.footer {
+  background-color: black;
+  color: rgb(65, 65, 68);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.secondaryFooter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.cyclus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cyclusLogo {
+  border-radius: 50%;
+  border: none;
+}
+
+.cycluslink {
+  text-decoration: none;
+  color: rgb(65, 65, 68);
+}
+
+.cycluslink:hover {
+  transition: .2s;
+  color: orange;
+  cursor: pointer;
+}
+
+.primaryFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+}
+
+.footerLinks {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  margin: 10px;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: rgb(65, 65, 68);
+  font-size: large;
+}
+
+.footerLink:hover {
+  transition: .2s;
+  color: orange;
+  cursor: pointer;
+}
+
+.blank {
+  margin-bottom: 10px;
+  color: orange;
+}
+
+/* ---------------------------------------------------------------------------main-------------------------------------------------------------------------------- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.first {
+  width: 100%;
+  height: 94vh;
+  background-image: url("../public/mainbg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.first h1 {
+  font-size: 10vh;
+  text-transform: uppercase;
+}
+
+
+.shitter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fuck h2 {
+  margin: 50px;
+}
+
+.fuck {
+  display: flex;
+  width: 80%;
+  font-size: 4vh;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+
+.urbanfitImage {
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.urbanfitImage:hover {
+  transition: .3s;
+  transform: scale(1.05);
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  margin-bottom: 5%;
+}
+
+.pricesTitle {
+  margin: 20px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.locationExplain {
+  width: 400px;
+  text-align: center;
+}
+
+.locationExplain p {
+  font-size: larger;
+  margin: 20px;
+}
+
+.map {
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+/* -----------------------------------------------------------------------------------------supplements----------------------------------------------------------------------------------------- */
+.supplementDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.supplement {
+  height: 500px;
+  width: 350px;
+  margin: 25px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.supplementheader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.firstLetter {
+  color: orange;
+}
+
+.supplementsTitle {
+  color: white;
+  font-size: 12vh;
+}
+
+.search {
+  margin: 20px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid black
+}
+
+.search:focus {
+  border: 1px solid orange;
+}
+
+.itemName {
+  margin: 10px;
+}
+
+.itemImage {
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.itemProducer {
+  margin: 10px;
+}
+
+.supplementintro {
+  height: 93vh;
+  background-image: url("../public/supbg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemPrice {
+  margin: 10px;
+}
+
+/* ----------------------------------------------------------------------------------------------------Diets-------------------------------------------------------------------------------------------------- */
+
+
+.dietsintro {
+  height: 94vh;
+  background-image: url("../public/dietsbg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.leftDiet {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+}
+
+.rightDiet {
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.829);
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.diettitle {
+  color: white;
+  font-size: 8vh;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.foodp {
+  width: 80%;
+  font-size: x-large;
+  text-align: center;
+}
+
+.foodButton {
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.dietLink {
+  text-decoration: none;
+  font-size: x-large;
+  cursor: pointer;
+  color: orangered;
+}
+
+.button2 {
+  display: none;
+}
+
+.dietmachineheader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5%;
+}
+
+.decider {
+  margin: 20px;
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.dietButton {
+  padding: 10px;
+  font-size: larger;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  outline: none;
+}
+
+.dietButton:hover {
+  transition: .2s;
+  cursor: pointer;
+  background-color: orange;
+  color: white;
+}
+
+.dietRender {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px;
+}
+
+.vegetariancontainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.cb {
+  width: 600px;
+  margin: 20px;
+}
+
+
+/* --------------------------------------------------------------------------------------------exercise------------------------------------------------------------ */
+.exerciseIntro {
+  height: 94vh;
+  background-image: url("../public/exercisebg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.rightExercise {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  text-align: end;
+}
+
+.exerciseTitle {
+  color: orange;
+  font-size: 10vh;
+  text-transform: uppercase;
+}
+
+.exerciseSpan {
+  font-size: 4vh;
+}
+
+.leftExercise {
+  width: 60%;
+}
+
+.exercisemachine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  text-align: center;
+
+}
+
+.exerciseButton {
+  width: 200px;
+  margin: 20px;
+}
+
+.beginner {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.days {
+  margin: 30px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ex {
+
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
+}
+
+ul {
+  text-align: start;
+}
+
+li {
+  margin: 10px;
+}
+
+.splitTitle {
+  margin: 10px;
+}
+
+.thatList {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.machineshit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thatsearch {
+  width: 80%;
+  padding: 10px;
+  margin: 40px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.finish {
+  margin: 20px;
+}
+
+.pagination {
+  margin: 30px;
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.pagination_link {
+  border: 1px solid black;
+  padding: 5px;
+  background-color: black;
+  color: orange;
+  border-radius: 5px;
+}
+
+.pagination_link:hover {
+  transition: .2s;
+  cursor: pointer;
+  background-color: rgb(40, 38, 38);
+}
+
+.paginationactive {
+  background-color: black;
+  color: orange;
+  border-radius: 50%;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.paginationactive:hover {
+  cursor: pointer;
+  transition: .2s;
+}
+
+.paginationdisabled {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+
 }
