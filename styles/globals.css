@@ -530,7 +530,7 @@ h2 .link:hover {
 
 .supplementintro {
   height: 93vh;
-  background-image: url("../public/supbg.png");
+  background-image: url("/supbg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -548,7 +548,7 @@ h2 .link:hover {
 
 .dietsintro {
   height: 94vh;
-  background-image: url("../public/dietsbg.png");
+  background-image: url("/dietsbg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -662,7 +662,7 @@ h2 .link:hover {
 /* --------------------------------------------------------------------------------------------exercise------------------------------------------------------------ */
 .exerciseIntro {
   height: 94vh;
-  background-image: url("../public/exercisebg.png");
+  background-image: url("/exercisebg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
