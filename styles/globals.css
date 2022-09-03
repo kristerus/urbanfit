@@ -382,7 +382,7 @@ h2 .link:hover {
 .first {
   width: 100%;
   height: 94vh;
-  background-image: url("../public/mainbg.png");
+  background-image: url("/mainbg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
