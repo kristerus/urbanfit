@@ -38,13 +38,13 @@ export default function Home() {
             <h1>Where Can You Find Us?</h1>
             <p>Urban Fit is located near Bulevardi Zogu I, near the center in the capital of Albania, Tirana. The gym is situated in a secondary road, 2 minutes of walking away from the boulevard and around 12 minutes away from the Skanderbeg Square. Located underground, one can take the stairs to arrive to the huge fitness center. The center is quite visible to the open eye when passing through the street.</p>
           </div>
-          <iframe className="map" id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11983.297792717138!2d19.8140675!3d41.3344306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x78d6f36f28f699b0!2sUrban%20fitness!5e0!3m2!1sen!2s!4v1661793319628!5m2!1sen!2s" width="600" height="450" style={{ border: "0" }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe className="map" id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11983.297792717138!2d19.8140675!3d41.3344306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x78d6f36f28f699b0!2sUrban%20fitness!5e0!3m2!1sen!2s!4v1661793319628!5m2!1sen!2s" width="600" height="450" style={{ border: "0" }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div className='gallery'>
           {
             imagesUrls.map(src => {
               return (
-                <div className='urbanfitImage'>
+                <div className='urbanfitImage' key={src}>
                   <Image src={`/${src}`} height="350px" width="350px" alt="urbanfit image" className='urbanfitImage'></Image>
                 </div>
               )

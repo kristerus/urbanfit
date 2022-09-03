@@ -21,14 +21,14 @@ const ExerciseFInder = () => {
                 <div className='thatList'>
                     {query == "" ? List.slice(offset, offset + perPage).map(item => {
                         return (
-                            <div className='finish'>
+                            <div className='finish' key={item.name}>
                                 <h1>{item.name}</h1>
                                 <Image src={`/${item.image}`} width="300px" height="300px" alt={item.name} />
                             </div>
                         )
                     }) : List.filter(item => item.tags.includes(query)).map(item => {
                         return (
-                            <div className='finish'>
+                            <div className='finish' key={item.name}>
                                 <h3>{item.name}</h3>
                                 <Image src={`/${item.image}`} width="300px" height="300px" alt={item.name} />
                             </div>
