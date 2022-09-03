@@ -16,7 +16,8 @@ const Supplements = () => {
             image: "multivitamin.webp",
             price: "",
             video: "",
-            id: "8"
+            id: "8",
+            tag: "Multi Vitamin Complex"
         },
         {
             name: "BCAA AMINO-HYDRATE",
@@ -25,7 +26,8 @@ const Supplements = () => {
             image: "bcaa-aminohydrate.webp",
             price: "",
             video: "",
-            id: "1"
+            id: "1",
+            tag: "Bcaa"
         },
         {
             name: "COLLAGEN PEPTIDE",
@@ -34,7 +36,8 @@ const Supplements = () => {
             image: "collagen.webp",
             price: "",
             video: "",
-            id: "16"
+            id: "16",
+            tag: "Collagen"
         },
         {
             name: "DIET WHEY PROTEIN",
@@ -43,17 +46,10 @@ const Supplements = () => {
             image: "dwp.webp",
             price: "",
             video: "",
-            id: "17"
+            id: "17",
+            tag: "Protein"
         },
-        {
-            name: "COLLAGEN PEPTIDE",
-            producer: "APPLIED NUTRITION",
-            description: "Look & Feel your Best: Applied Nutrition Hydrolysed Bovine Collagen Peptides are neutral in flavour and perfect for adding to water, coffee, smoothies, recipes, yoghurts and more. Our Collagen Peptides can be mixed in hot or cold liquids and can be used any time during the day.",
-            image: "collagen.webp",
-            price: "",
-            video: "",
-            id: "18"
-        },
+
         {
             name: "RIPPED ANIMALS ",
             producer: "UNIVERSAL NUTRITION",
@@ -61,7 +57,9 @@ const Supplements = () => {
             image: "rpa.jpg",
             price: "",
             video: "",
-            id: "19"
+            id: "19",
+            tag: "Ripped Animals"
+
         },
         {
             name: "CREATINE",
@@ -70,7 +68,9 @@ const Supplements = () => {
             image: "bcreate.webp",
             price: "",
             video: "",
-            id: "20"
+            id: "20",
+            tag: "Creatine"
+
         },
         {
             name: "PRIME WHEY PROTEIN ",
@@ -79,7 +79,9 @@ const Supplements = () => {
             image: "prime-whey-protein.png",
             price: "",
             video: "",
-            id: "4"
+            id: "4",
+            tag: "Protein"
+
         },
         {
             name: "Whey Protein",
@@ -88,7 +90,9 @@ const Supplements = () => {
             image: "wheyproteinqnt.png",
             price: "",
             video: "",
-            id: "2"
+            id: "2",
+            tag: "Protein"
+
         },
         {
             name: "OMEGA 3",
@@ -97,7 +101,9 @@ const Supplements = () => {
             image: "omega-3.png",
             price: "",
             video: "",
-            id: "5"
+            id: "5",
+            tag: "Omega 3"
+
         },
         {
             name: "BCAA POWDER 8500",
@@ -106,7 +112,9 @@ const Supplements = () => {
             image: "bcaa-8500.png",
             price: "",
             video: "",
-            id: "6"
+            id: "6",
+            tag: "Bcaa"
+
         },
         {
             name: "CREATINE",
@@ -115,7 +123,9 @@ const Supplements = () => {
             image: "Creatine-monohydrate-powder.png",
             price: "",
             video: "",
-            id: "9"
+            id: "9",
+            tag: "Creatine"
+
         },
         {
             name: "L-Carnitine",
@@ -124,7 +134,8 @@ const Supplements = () => {
             image: "lcarnitine.jpg",
             price: "",
             video: "",
-            id: "10"
+            id: "10",
+            tag: "Carnitine"
         },
         {
             name: "Elite NO + PRE-WORKOUT ",
@@ -133,7 +144,9 @@ const Supplements = () => {
             image: "pw.jpg",
             price: "",
             video: "",
-            id: "11"
+            id: "11",
+            tag: "Pre-workout"
+
         },
         {
             name: "ISOTONIC - DRINK",
@@ -142,7 +155,8 @@ const Supplements = () => {
             image: "pw.jpg",
             price: "",
             video: "",
-            id: "12"
+            id: "12",
+            tag: "Isotonic Drink"
         },
         {
             name: " ACTIF BCAA'S 8000- DRINK",
@@ -151,7 +165,8 @@ const Supplements = () => {
             image: "d1.jpg",
             price: "",
             video: "",
-            id: "13"
+            id: "13",
+            tag: "Actif Bcaa"
         },
 
         {
@@ -161,7 +176,9 @@ const Supplements = () => {
             image: "d2.jpg",
             price: "",
             video: "",
-            id: "14"
+            id: "14",
+            tag: "Actif Bcaa"
+
         },
         {
             name: " ACTIF BCAA'S 8000- DRINK",
@@ -170,7 +187,9 @@ const Supplements = () => {
             image: "d3.jpg",
             price: "",
             video: "",
-            id: "15"
+            id: "15",
+            tag: "Actif Bcaa"
+
         },
 
         {
@@ -180,7 +199,8 @@ const Supplements = () => {
             image: "bpimassgainer.webp",
             price: "",
             video: "",
-            id: "3"
+            id: "3",
+            tag: "Bulk Xl - Mass Gainer"
         },
         {
             name: "ULTRA WHEY PRO- PROTEIN",
@@ -189,7 +209,8 @@ const Supplements = () => {
             image: "ultrawheypro.jpg",
             price: "",
             video: "",
-            id: "7"
+            id: "7",
+            tag: "Ultra Whey Pro - Protein"
         },
 
     ]
@@ -214,7 +235,7 @@ const Supplements = () => {
                             <input type="text" placeholder='Search...' className="search" onChange={e => setQuery(e.target.value)} />
                         </div>
                         <div className='supplementDisplay'>
-                            {supplementList.filter(item => item.name.toLowerCase().includes(query)).map(item => {
+                            {supplementList.filter(item => item.tag.includes(query)).map(item => {
                                 return (
                                     <div className='supplement' key={item.id}>
                                         <h2 className='itemName'>{item.name}</h2>
