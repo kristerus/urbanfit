@@ -35,7 +35,7 @@ const Footer = () => {
                     <h2 className="blank">Contacts</h2>
                     <ul>
                         <li className='social'><PhoneIcon /> <h3><a href="tel:069-409-6422" className='footerLink'>069 409 6422</a></h3></li>
-                        <li className='social'><EmailIcon /> <h3>urbanfit.al</h3></li>
+                        <li className='social'><EmailIcon /> <h3>urbanfit@gmail.com</h3></li>
                         <li className='social'><InstagramIcon /> <h3>urbanfit.al</h3></li>
 
 
